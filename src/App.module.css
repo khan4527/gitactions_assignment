@@ -1,0 +1,65 @@
+.app {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 0px 40px 0px;
+}
+
+.btnDiv {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btnDiv button {
+  padding: 20px 60px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: teal;
+  cursor: pointer;
+}
+
+.btnDiv button:nth-child(1) {
+  background-color: rgb(159, 0, 0);
+}
+
+.gridDiv {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* meidum screens */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .btnDiv button {
+    padding: 10px 30px;
+    font-size: 15px;
+    border-radius: 15px;
+  }
+
+  .gridDiv {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* small screens */
+@media all and (min-width: 320px) and (max-width: 767px) {
+  .btnDiv button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 15px;
+  }
+
+  .gridDiv {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
